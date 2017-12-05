@@ -1,0 +1,1 @@
+say "$POPCLIP_TEXT"

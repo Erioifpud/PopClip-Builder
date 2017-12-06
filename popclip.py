@@ -285,20 +285,3 @@ class Config:
             obj['Extension Description'] = self.extDesc
 
         return obj
-
-'''
-a1 = Action('a1', type=ActionType.ShellScript('shell', 'inter'),
-            image='image1', after=BeforeAfter.CUT)
-a2 = Action('a2', type=ActionType.Service('service'), image='image2',
-            before=BeforeAfter.COPY, requirements=[Requirement.HTML])
-b = Config('extName', 'work.erio', [a1, a2])
-print(b.data)
-with open('test.plist', 'wb') as f:
-    plistlib.dump(b.data, f)
-# --------------
-action = Action('echo', type=ActionType.ShellScript('echo.sh', '/bin/zsh'),
-                after=BeforeAfter.SHOW_RESULT, image='icon.png')
-config = Config('EchoTest', 'work.erio', actions=[action])
-with open('Config.plist', 'wb') as f:
-    plistlib.dump(config.data, f)
-'''
